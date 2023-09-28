@@ -4,7 +4,7 @@ let currentNumber = 0;
 
 function responseValue(){
     
-    server.get('/number.js', (req,res) => {
+    server.get('/api/number.js', (req,res) => {
         
         res.json({
             id: currentNumber
