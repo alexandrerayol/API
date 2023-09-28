@@ -1,0 +1,12 @@
+{
+    "version": 2,
+    "routes": [
+      {
+        "src": "/api/number.js",
+        "methods": ["GET"],
+        "headers": {
+          "Access-Control-Allow-Origin": "*"
+        }
+      }
+    ]
+  }
