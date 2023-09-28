@@ -1,20 +1,27 @@
 const express = require('express');
 const server = express();
+let currentNumber = 0;
 
-let number = {
-    'id': 0
+function responseValue(){
+    
+    server.get('/number.js', (req,res) => {
+        
+        res.json({
+            id: currentNumber
+        })
+        validadeNumber();
+    })
 }
 
-
-server.get('/number', (request, response) => {
-    if(number.id >= 5){
-        number.id = 0;
+function validadeNumber(){
+    if(currentNumber >= 5){
+        currentNumber = 0;
     }else{
-        response.json(number)
-        number.id++;
+        currentNumber++;
     }
-})
+}
 
-server.listen(5050, () => {
-    console.log('servidor no ar')
+responseValue();
+server.listen(3000, () => {
+    console.log('servidor funcionando')
 })
