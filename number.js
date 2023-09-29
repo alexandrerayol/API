@@ -6,7 +6,7 @@ function responseValue(){
     const objectTest = {
         id: 82
     }
-    server.get('/api/number.js', (req,res) => {
+    server.get('api/getNumber.js', (req,res) => {
         res.header('Content-Type', 'application/json');
         res.json(objectTest)
     })
@@ -17,7 +17,7 @@ function validadeNumber(){
         currentNumber = 0;
     }else{
         currentNumber++;
-    }
+    }v
 }
 
 responseValue();
