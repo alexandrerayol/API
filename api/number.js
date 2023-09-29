@@ -3,13 +3,12 @@ const server = express();
 let currentNumber = 0;
 
 function responseValue(){
-    
+    const objectTest = {
+        id: 82
+    }
     server.get('/api/number.js', (req,res) => {
-        
-        res.json({
-            id: currentNumber
-        })
-        validadeNumber();
+        res.header('Content-Type', 'application/json');
+        res.json(objectTest)
     })
 }
 
@@ -22,6 +21,5 @@ function validadeNumber(){
 }
 
 responseValue();
-server.listen(3000, () => {
-    console.log('servidor funcionando')
+server.listen(3333, () => {
 })
