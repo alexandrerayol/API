@@ -9,17 +9,16 @@ function responseValue(){
     server.get('/api/number.js', (req,res) => {
         res.header('Content-Type', 'application/json');
         res.json(objectTest)
-        validadeNumber()
+
+        if(currentNumber >= 5){
+            currentNumber = 0;
+        }else{
+            currentNumber++;
+        }
+        
     })
 }
 
-function validadeNumber(){
-    if(currentNumber >= 5){
-        currentNumber = 0;
-    }else{
-        currentNumber++;
-    }v
-}
 
 responseValue();
 server.listen(3333, () => {
