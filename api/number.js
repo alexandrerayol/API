@@ -4,11 +4,12 @@ let currentNumber = 0;
 
 function responseValue(){
     const objectTest = {
-        id: 82
+        id: currentNumber;
     }
     server.get('/api/number.js', (req,res) => {
         res.header('Content-Type', 'application/json');
         res.json(objectTest)
+        validadeNumber()
     })
 }
 
