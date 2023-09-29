@@ -1,5 +1,5 @@
 function getNumber() {
-    const url = 'http://localhost:3333/api/number.js'; // Substitua pela URL correta da sua API
+    const url = './number.js';
 
     fetch(url)
         .then((response) => {
