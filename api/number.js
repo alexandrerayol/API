@@ -1,11 +1,11 @@
 const express = require('express');
 const server = express();
 let currentNumber = 0;
+let objectTest = {
+    id: currentNumber
+}
 
 function responseValue(){
-    const objectTest = {
-        id: currentNumber
-    }
     server.get('/api/number.js', (req,res) => {
         res.header('Content-Type', 'application/json');
         res.json(objectTest)
@@ -15,7 +15,7 @@ function responseValue(){
         }else{
             currentNumber++;
         }
-        
+
     })
 }
 
