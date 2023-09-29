@@ -1,5 +1,5 @@
 function getNumber() {
-    const url = './number.js';
+    const url = 'api/number.js';
 
     fetch(url)
         .then((response) => {
