@@ -6,6 +6,8 @@ function getNumber() {
     .then(data => {
         console.log(data.id);
         div.innerText = data.id;
+    }).catch(error => {
+        div.innerText = 'erro ao entrar em contato com o servidor.'
     });
 }
 getNumber();
