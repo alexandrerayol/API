@@ -4,7 +4,7 @@ let currentNumber = 0;
 
 function responseValue(){
     const objectTest = {
-        id: currentNumber;
+        id: currentNumber
     }
     server.get('/api/number.js', (req,res) => {
         res.header('Content-Type', 'application/json');
