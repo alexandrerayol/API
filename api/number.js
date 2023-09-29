@@ -1,8 +1,7 @@
 const express = require('express');
 const server = express();
-let currentNumber = 0;
 let objectTest = {
-    id: currentNumber
+    id: 0
 }
 
 function responseValue(){
@@ -10,10 +9,10 @@ function responseValue(){
         res.header('Content-Type', 'application/json');
         res.json(objectTest)
 
-        if(currentNumber >= 5){
-            currentNumber = 0;
+        if(objectTest.id >= 5){
+            objectTest.id = 0;
         }else{
-            currentNumber++;
+            objectTest.id++;
         }
 
     })
